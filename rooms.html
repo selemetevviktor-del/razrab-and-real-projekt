@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Номера — Hotel lux</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; font-style: italic; background: #fff; color: #000; }
+
+    /* Навигация */
+    .navbar-hotel { background: #0b1a2e; min-height: 70px; padding: 0 5% 0 5%; }
+    .navbar-hotel .navbar-brand { color: #fff; font-size: 1.5rem; font-weight: 500; display: flex; align-items: center; }
+    .navbar-hotel .navbar-brand img { height: 60px; width: 60px; object-fit: cover; margin-right: 2rem; }
+    .navbar-hotel .nav-link { color: #fff; font-size: 1.4rem; font-style: normal; letter-spacing: .04em; padding: .5rem 2.2rem; }
+    .navbar-hotel .nav-link:hover { color: #c49a5c; }
+    .btn-book { background: #c49a5c; color: #fff; font-size: 1.4rem; font-style: normal; letter-spacing: .04em;
+      border-radius: 30px; padding: .35rem 1.4rem; }
+    .btn-book:hover { background: #b08849; color: #fff; }
+    .navbar-toggler { border-color: rgba(255,255,255,.5); }
+    .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
+    /* Страница «Номера» */
+    .page-title { font-size: 2.2rem; font-style: normal; font-weight: 400; margin: 2.2rem 0 4.5rem 5.5%; letter-spacing: .02em; }
+    .rooms-table { width: 100%; font-style: normal; }
+    .rooms-table th { font-size: 1.5rem; font-weight: 400; letter-spacing: .03em; border: 0; padding: 0 0 .8rem; text-align: center; white-space: nowrap; }
+    .rooms-table th:first-child, .rooms-table td:first-child { text-align: left; }
+    .rooms-table td { border: 0; vertical-align: middle; text-align: center; padding: .5rem 0 2.5rem; }
+    .rooms-table .num { font-family: 'Oswald', 'Arial Narrow', sans-serif; font-size: 2.1rem; font-weight: 500; }
+    .room-photo { width: 212px; max-width: 100%; height: 106px; object-fit: cover; display: block; }
+    .room-name { font-style: italic; font-weight: 500; font-size: 1.05rem; margin-top: .8rem; display: block; }
+    .btn-more { background: #0b1a2e; color: #fff; border-radius: 30px; padding: .8rem 2.2rem; font-size: .95rem; }
+    .btn-more:hover { background: #c49a5c; color: #fff; }
+    .navbar-hotel .nav-link.active { color: #c49a5c; }
+    footer { background: #0b1a2e; color: #fff; text-align: center; padding: 1.2rem 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- Меню -->
+  <nav class="navbar navbar-expand-lg navbar-hotel">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="Логотип Hotel lux">Hotel lux
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link active" href="rooms.html">Номера</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">О нас</a></li>
+      </ul>
+      <a class="btn btn-book" href="booking.html">Забронировать</a>
+    </div>
+  </nav>
+
+
+  <h1 class="page-title">Номера</h1>
+
+  <main class="container-fluid px-lg-5">
+    <div class="table-responsive">
+      <table class="table rooms-table">
+        <thead>
+          <tr>
+            <th style="width:22%">Номер</th>
+            <th style="width:14%">Площадь</th>
+            <th style="width:12%">Гостей</th>
+            <th style="width:12%">Кровать</th>
+            <th style="width:20%">Цена за ночь</th>
+            <th style="width:20%">Действие</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img class="room-photo" src="img/room1.jpg" alt="Стандартный номер">
+              <span class="room-name">Стандартный номер</span>
+            </td>
+            <td class="num">20м2</td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">3500</td>
+            <td><a class="btn btn-more" href="#">Подробнее</a></td>
+          </tr>
+          <tr>
+            <td>
+              <img class="room-photo" src="img/room2.jpg" alt="Улучшеный номер">
+              <span class="room-name">Улучшеный номер</span>
+            </td>
+            <td class="num">28м2</td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">5000</td>
+            <td><a class="btn btn-more" href="#">Подробнее</a></td>
+          </tr>
+          <tr>
+            <td>
+              <img class="room-photo" src="img/room3.jpg" alt="Люкс">
+              <span class="room-name">Люкс</span>
+            </td>
+            <td class="num">45м2</td>
+            <td class="num">2</td>
+            <td class="num">1</td>
+            <td class="num">8500</td>
+            <td><a class="btn btn-more" href="#">Подробнее</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>Hotel lux</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
